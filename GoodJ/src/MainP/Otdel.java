@@ -39,7 +39,7 @@ public class Otdel {
 	/**
 	 * Запускаем приложение
 	 */
-	private void main(boolean arg) {
+	private void spawn(boolean arg) {
 		/**
 		 * Объявляем, что это необходимо выполнять в главном потоке
 		 */
@@ -234,6 +234,6 @@ public class Otdel {
 	 * Публичный метод для инициализации окна "Планировщик"
 	 */
 	public void init(boolean arg) {
-		main(arg);
+		spawn(arg);
 	}
 }

@@ -54,7 +54,7 @@ public class Planir {
 	/**
 	 * Запускаем приложения
 	 */
-	private void main(boolean i) {
+	private void spawn(boolean i) {
 		/**
 		 * Объявляем, что это необходимо выполнять в главном потоке
 		 */
@@ -280,6 +280,6 @@ public class Planir {
 	 * Метод для создания окна "Планировщик"
 	 */
 	public void setinit(boolean arg) {
-		main(arg);
+		spawn(arg);
 	}
 }
