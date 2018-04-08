@@ -3,10 +3,6 @@
  */
 package MainP;
 /**
- * Добавляем библиотеку для работы с асинхронными событиями
- */
-import java.awt.EventQueue;
-/**
  * Подключаем библиотеку для работы с графическим интерфейсом
  */
 import javax.swing.JFrame;
@@ -37,62 +33,27 @@ public class Otdel {
 	private JTextField textField;
 	private JTextField textField_1;
 	/**
-	 * Запускаем приложение
-	 */
-	private void spawn(boolean arg) {
-		/**
-		 * Объявляем, что это необходимо выполнять в главном потоке
-		 */
-		EventQueue.invokeLater(new Runnable() {
-			/**
-			 * Метод run
-			 */
-			public void run() {
-				/**
-				 * Выполняем отслеживание блока кода, где может произойти ошибка, при помощи
-				 * исключения try
-				 */
-				try {
-					/**
-					 * Создаём объект window
-					 */
-					Otdel window = new Otdel();
-					/**
-					 * Отображаем окно
-					 */
-					window.frame.setVisible(arg);
-				} 
-				/**
-				 * Исключение catch
-				 */
-				catch (Exception e) {
-					/**
-					 * Обрабатываем исключение типа Exception e
-					 */
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Вызываем конструктор
 	 */
 	public Otdel() {
 		/**
 		 * Вызываем метод
 		 */
-		initialize();
+		initialize(false);
 	}
 
 	/**
 	 * Инициализируем компоненты фрейма
 	 */
-	private void initialize() {
+	private void initialize(boolean arg) {
 		/**
 		 * Создаем экземпляр класса JFrame
 		 */
 		frame = new JFrame();
+		/**
+		 * Отображаем окно
+		 */
+		frame.setVisible(arg);
 		/**
 		 * Устанавливаем название окна
 		 */
@@ -234,6 +195,6 @@ public class Otdel {
 	 * Публичный метод для инициализации окна "Планировщик"
 	 */
 	public void init(boolean arg) {
-		spawn(arg);
+		initialize(arg);
 	}
 }

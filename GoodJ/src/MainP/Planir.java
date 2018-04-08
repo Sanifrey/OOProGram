@@ -3,10 +3,6 @@
  */
 package MainP;
 /**
- * Добавляем библиотеку для работы с асинхронными событиями
- */
-import java.awt.EventQueue;
-/**
  * Подключаем библиотеку для работы с графическим интерфейсом
  */
 import javax.swing.JFrame;
@@ -49,47 +45,6 @@ public class Planir {
 	private JLabel lblNewLabel;
 	private JLabel label_1;
 	private JLabel label_2;
-
-
-	/**
-	 * Запускаем приложения
-	 */
-	private void spawn(boolean i) {
-		/**
-		 * Объявляем, что это необходимо выполнять в главном потоке
-		 */
-		EventQueue.invokeLater(new Runnable() {
-			/**
-			 * Метод run
-			 */
-			public void run() {
-				/**
-				 * Выполняем отслеживание блока кода, где может произойти ошибка, при помощи
-				 * исключения try
-				 */
-				try {
-					/**
-					 * Создаём объект window
-					 */
-					Planir window = new Planir();
-					/**
-					 * Отображаем окно
-					 */
-					window.frame.setVisible(i);
-				} 
-				/**
-				 * Исключение catch
-				 */
-				catch (Exception e) {
-					/**
-					 * Обрабатываем исключение типа Exception e
-					 */
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
 	/**
 	 * Вызываем конструктор.
 	 */
@@ -97,17 +52,21 @@ public class Planir {
 		/**
 		 * Вызываем метод
 		 */
-		initialize();
+		initialize(false);
 	}
 
 	/**
 	 * Инициализируем компоненты фрейма
 	 */
-	private void initialize() {
+	private void initialize(boolean arg) {
 		/**
 		 * Создаем  экземпляр класса JFrame
 		 */
 		frame = new JFrame();
+		/**
+		 * Отображаем окно
+		 */
+		frame.setVisible(arg);
 		/**
 		 * Устанавливаем название окна
 		 */
@@ -280,6 +239,6 @@ public class Planir {
 	 * Метод для создания окна "Планировщик"
 	 */
 	public void setinit(boolean arg) {
-		spawn(arg);
+		initialize(arg);
 	}
 }
