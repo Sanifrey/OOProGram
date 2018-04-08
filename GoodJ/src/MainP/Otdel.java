@@ -1,33 +1,77 @@
+/**
+ * Устанавливаем принадлежность класса к пакету
+ */
 package MainP;
-
+/**
+ * Добавляем библиотеку для работы с асинхронными событиями
+ */
 import java.awt.EventQueue;
-
+/**
+ * Подключаем библиотеку для работы с графическим интерфейсом
+ */
 import javax.swing.JFrame;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
+/**
+ * Подключаем библиотеку для работы с менеджером компановки
+ */
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+/**
+ * Подключаем класс событий
+ */
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+/**
+ * Объявляем класс с модификатором public
+ */
 public class Otdel {
-
+	/**
+	 * Для создания основного контейнера для приложения используем контейнер JFrame
+	 */
 	private JFrame frame;
+	/**
+	 * Объявляем поля ввода JTextField
+	 * textField - Для отображения значения всей площади комнаты
+	 * textField_1 - Для отображения значения свободного места в комнате
+	 */
 	private JTextField textField;
 	private JTextField textField_1;
-
 	/**
-	 * Launch the application.
+	 * Запускаем приложение
 	 */
 	private void main(boolean arg) {
+		/**
+		 * Объявляем, что это необходимо выполнять в главном потоке
+		 */
 		EventQueue.invokeLater(new Runnable() {
+			/**
+			 * Метод run
+			 */
 			public void run() {
+				/**
+				 * Выполняем отслеживание блока кода, где может произойти ошибка, при помощи
+				 * исключения try
+				 */
 				try {
+					/**
+					 * Создаём объект window
+					 */
 					Otdel window = new Otdel();
+					/**
+					 * Отображаем окно
+					 */
 					window.frame.setVisible(arg);
-				} catch (Exception e) {
+				} 
+				/**
+				 * Исключение catch
+				 */
+				catch (Exception e) {
+					/**
+					 * Обрабатываем исключение типа Exception e
+					 */
 					e.printStackTrace();
 				}
 			}
@@ -35,47 +79,102 @@ public class Otdel {
 	}
 
 	/**
-	 * Create the application.
+	 * Вызываем конструктор
 	 */
 	public Otdel() {
-
+		/**
+		 * Вызываем метод
+		 */
 		initialize();
 	}
 
 	/**
-	 * Initialize the contents of the frame.
+	 * Инициализируем компоненты фрейма
 	 */
 	private void initialize() {
-
+		/**
+		 * Создаем экземлпяр класса Otdel
+		 */
 		frame = new JFrame();
+		/**
+		 * Устанавливаем название окна
+		 */
 		frame.setTitle("Отделочник");
+		/**
+		 * Указываем координаты верхней левой вершины окна, а также его ширину и высоту.
+		 */
 		frame.setBounds(100, 100, 450, 300);
+		/**
+		 * Указываем операцию, которая будет произведена при закрытии окна.
+		 */
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+		/**
+		 * Создаём простой компонент label класса JLabel
+		 */
 		JLabel label = new JLabel("Общая площадь");
-
+		/**
+		 * Создаём простой компонент textField класса JTextField 
+		 */
 		textField = new JTextField();
+		/**
+		 * Указываем количество символов в строке
+		 */
 		textField.setColumns(10);
-
+		/**
+		 * Создаём простой компонент label_1 класса JLabel
+		 */
 		JLabel label_1 = new JLabel("Свободная площадь");
-
+		/**
+		 * Создаём простой компонент textField класса JTextField 
+		 */
 		textField_1 = new JTextField();
+		/**
+		 * Указываем количество символов в строке
+		 */
 		textField_1.setColumns(10);
-
+		/**
+		 * Создаём простой компонент button класса JButton 
+		 */
 		JButton button = new JButton("Сохранить");
+		/**
+		 * Добавляем слушателя к кнопке button с помощью вызова addActionListener
+		 */
 		button.addActionListener(new ActionListener() {
+			/**
+			 * Интерфейс ActionListener требует только реализации одного метода — actionPerformed.
+			 */
 			public void actionPerformed(ActionEvent e) {
+				/**
+				 * Вызваем метод для сохранения данных в файл
+				 */
 				SaveInFile();
 			}
 		});
-
+		/**
+		 * Создаём простой компонент button_1 класса JButton 
+		 */
 		JButton button_1 = new JButton("В меню");
+		/**
+		 * Добавляем слушателя к кнопке button_1 с помощью вызова addActionListener
+		 */
 		button_1.addActionListener(new ActionListener() {
+			/**
+			 * Интерфейс ActionListener требует только реализации одного метода — actionPerformed.
+			 */
 			public void actionPerformed(ActionEvent e) {
+				/**
+				 * Скрываем окно "Отделочник"
+				 */
 				frame.setVisible(false);
 			}
 		});
+		/**
+		 * Создаём экземляр класса
+		 */
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
+		/**
+		 * Установка размещения элементов на панели
+		 */
 		groupLayout.setHorizontalGroup(groupLayout
 				.createParallelGroup(
 						Alignment.LEADING)
@@ -101,23 +200,49 @@ public class Otdel {
 								GroupLayout.PREFERRED_SIZE)
 						.addPreferredGap(ComponentPlacement.RELATED, 83, Short.MAX_VALUE).addComponent(button)
 						.addGap(24).addComponent(button_1).addContainerGap()));
+		/**
+		 * Привязка размещения элементов к панели
+		 */
 		frame.getContentPane().setLayout(groupLayout);
 	}
-
+	/**
+	 * Метод для сохранения в файл
+	 */
 	private void SaveInFile() {
+		/**
+		 * Создаем экземлпяр класса SaveFile
+		 */
 		SaveFile sf = new SaveFile();
+		/**
+		 * Вызываем метод GetSaveInFile
+		 */
 		sf.GetSaveInFile();
 	}
-
+	/**
+	 * Метод для обновления текстовых полей при открытии окна "Отделочник"
+	 */
 	private void UpdateTextFields() {
+		/**
+		 * Заполняем поле textField в окне "Отделочник" получая значения
+		 * через геттер getAllArea()
+		 */
 		textField.setText(String.valueOf(Formula.getAllArea()));
+		/**
+		 * Заполняем поле textField_1 в окне "Отделочник" получая значения
+		 * через геттер getFreeArea()
+		 */
 		textField_1.setText(String.valueOf(Formula.getFreeArea()));
 	}
-
+	/**
+	 * Публичный метод(Сеттер) для установки в окне "Планировщик" значения setVisible
+	 */
 	public void SetVisiable(boolean arg) {
 		frame.setVisible(arg);
 		UpdateTextFields();
 	}
+	/**
+	 * Публичный метод(Сеттер) для инициализации окна "Планировщик"
+	 */
 	public void init(boolean arg) {
 		main(arg);
 	}
