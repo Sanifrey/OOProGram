@@ -2,12 +2,10 @@
  * Устанавливаем принадлежность класса к пакету
  */
 package MainP;
-
 /**
 * Подключаем библиотеку для работы с диалоговыми окнами
  */
 import javax.swing.JOptionPane;
-
 /**
  * Объявляем класс с модификатором public
  */
@@ -17,19 +15,18 @@ public class Formula {
 	 */
 	private Planir plframe;
 	/**
-	 * Объявляем приватные статические переменные. FreeArea - значение свободной
-	 * площади в комнате. AllArea - значение всей площади комнаты.
+	 * Объявляем приватные статические переменные.
+	 * FreeArea - значение свободной площади в комнате. 
+	 * AllArea - значение всей площади комнаты.
 	 */
 	private static float FreeArea;
 	private static float AllArea;
-
 	/**
 	 * Вызываем конструктор
 	 */
 	public Formula(Planir someframe) {
 		this.plframe = someframe;
 	}
-
 	/**
 	 * Приватный метод для расчёта свободной площади в комнате
 	 */
@@ -55,7 +52,6 @@ public class Formula {
 		 */
 		FillTextField_3(FreeArea);
 	}
-
 	/**
 	 * Публичный метод(Геттер) для вызова приватного метода FormulaFree.
 	 */
@@ -77,21 +73,18 @@ public class Formula {
 			JOptionPane.showMessageDialog(null, "\nПараметры объекта заполнены неверно!");
 		}
 	}
-
 	/**
 	 * Метод для заполнения в форме планировщик поля textField_3 значением FreeArea
 	 */
 	private void FillTextField_3(float FreeArea) {
 		plframe.settextField_3(String.valueOf(FreeArea));
 	}
-
 	/**
 	 * Публичный метод(Геттер) для получения значения свободной площади в комнате.
 	 */
 	public static float getFreeArea() {
 		return FreeArea;
 	}
-
 	/**
 	 * Публичный метод(Геттер) для получения значения всей площади в комнате.
 	 */

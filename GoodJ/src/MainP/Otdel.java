@@ -26,9 +26,9 @@ public class Otdel {
 	 */
 	private JFrame frame;
 	/**
-	 * Объявляем поля ввода JTextField
-	 * textField - Для отображения значения всей площади комнаты
-	 * textField_1 - Для отображения значения свободного места в комнате
+	 * Объявляем поля ввода JTextField.
+	 * textField - Для отображения значения всей площади комнаты.
+	 * textField_1 - Для отображения значения свободного места в комнате.
 	 */
 	private JTextField textField;
 	private JTextField textField_1;
@@ -41,7 +41,6 @@ public class Otdel {
 		 */
 		initialize(false);
 	}
-
 	/**
 	 * Инициализируем компоненты фрейма
 	 */
@@ -66,7 +65,6 @@ public class Otdel {
 		 * Указываем операцию, которая будет произведена при закрытии окна.
 		 */
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
 		/**
 		 * Создаём простые компоненты класса JLabel
 		 */
@@ -82,9 +80,8 @@ public class Otdel {
 		 */
 		textField_1.setColumns(10);
 		textField.setColumns(10);
-		
 		/**
-		 * Создаём простой компонент button класса JButton 
+		 * Создаём простой компонент button класса JButton
 		 */
 		JButton button = new JButton("Сохранить");
 		/**
@@ -92,17 +89,18 @@ public class Otdel {
 		 */
 		button.addActionListener(new ActionListener() {
 			/**
-			 * Интерфейс ActionListener требует только реализации одного метода — actionPerformed.
+			 * Интерфейс ActionListener требует только реализации одного метода —
+			 * actionPerformed.
 			 */
 			public void actionPerformed(ActionEvent e) {
 				/**
-				 *  Вызываем метод для сохранения данных в файл
+				 * Вызываем метод для сохранения данных в файл
 				 */
 				SaveInFile();
 			}
 		});
 		/**
-		 * Создаём простой компонент button_1 класса JButton 
+		 * Создаём простой компонент button_1 класса JButton
 		 */
 		JButton button_1 = new JButton("В меню");
 		/**
@@ -110,7 +108,8 @@ public class Otdel {
 		 */
 		button_1.addActionListener(new ActionListener() {
 			/**
-			 * Интерфейс ActionListener требует только реализации одного метода — actionPerformed.
+			 * Интерфейс ActionListener требует только реализации одного метода —
+			 * actionPerformed.
 			 */
 			public void actionPerformed(ActionEvent e) {
 				/**
@@ -174,13 +173,13 @@ public class Otdel {
 	 */
 	private void UpdateTextFields() {
 		/**
-		 * Заполняем поле textField в окне "Отделочник" получая значения
-		 * через геттер getAllArea()
+		 * Заполняем поле textField в окне "Отделочник" получая значения через геттер
+		 * getAllArea()
 		 */
 		textField.setText(String.valueOf(Formula.getAllArea()));
 		/**
-		 * Заполняем поле textField_1 в окне "Отделочник" получая значения
-		 * через геттер getFreeArea()
+		 * Заполняем поле textField_1 в окне "Отделочник" получая значения через геттер
+		 * getFreeArea()
 		 */
 		textField_1.setText(String.valueOf(Formula.getFreeArea()));
 	}

@@ -2,7 +2,6 @@
  * Устанавливаем принадлежность класса к пакету
  */
 package MainP;
-
 /**
  * Добавляем библиотеку для работы с асинхронными событиями
  */
@@ -67,7 +66,6 @@ public class MainMenu {
 				}
 			}
 		});
-
 	}
 
 	/**
@@ -109,7 +107,7 @@ public class MainMenu {
 		 */
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		/**
-		 * Создаём простой компонент btnNewButton класса JButton 
+		 * Создаём простой компонент btnNewButton класса JButton
 		 */
 		JButton btnNewButton = new JButton("Планировщик");
 		/**
@@ -117,7 +115,7 @@ public class MainMenu {
 		 */
 		frame.getContentPane().add(btnNewButton, BorderLayout.WEST);
 		/**
-		 * Создаём простой компонент btnNewButton_1 класса JButton 
+		 * Создаём простой компонент btnNewButton_1 класса JButton
 		 */
 		JButton btnNewButton_1 = new JButton("Отделочник");
 		/**
@@ -125,11 +123,13 @@ public class MainMenu {
 		 */
 		frame.getContentPane().add(btnNewButton_1, BorderLayout.EAST);
 		/**
-		 * Добавляем слушателя к кнопке btnNewButton_1 с помощью вызова addActionListener
+		 * Добавляем слушателя к кнопке btnNewButton_1 с помощью вызова
+		 * addActionListener
 		 */
 		btnNewButton_1.addActionListener(new ActionListener() {
 			/**
-			 * Интерфейс ActionListener требует только реализации одного метода — actionPerformed.
+			 * Интерфейс ActionListener требует только реализации одного метода —
+			 * actionPerformed.
 			 */
 			public void actionPerformed(ActionEvent e) {
 				/**
@@ -138,22 +138,20 @@ public class MainMenu {
 				ot.Visiable(true);
 			}
 		});
-
 		/**
 		 * Добавляем слушателя к кнопке btnNewButton с помощью вызова addActionListener
 		 */
 		btnNewButton.addActionListener(new ActionListener() {
 			/**
-			 * Интерфейс ActionListener требует только реализации одного метода — actionPerformed.
+			 * Интерфейс ActionListener требует только реализации одного метода —
+			 * actionPerformed.
 			 */
 			public void actionPerformed(ActionEvent e) {
 				/**
 				 * Делаем видимым окно "Планировщик"
 				 */
 				mp.Visiable(true);
-
 			}
 		});
 	}
-	
 }
