@@ -21,7 +21,7 @@ public class Otdel {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(boolean arg) {
+	private void main(boolean arg) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -122,5 +122,8 @@ public class Otdel {
 	public void SetVisiable(boolean arg) {
 		frame.setVisible(arg);
 		UpdateTextFields();
+	}
+	public void init(boolean arg) {
+		main(arg);
 	}
 }

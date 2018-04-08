@@ -4,7 +4,6 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import java.awt.BorderLayout;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JTextField;
@@ -26,7 +25,7 @@ public class Planir {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(boolean i) {
+	private void main(boolean i) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -164,5 +163,8 @@ public class Planir {
 
 	public void setVisiable(boolean arg) {
 		frame.setVisible(arg);
+	}
+	public void init(boolean arg) {
+		main(arg);
 	}
 }

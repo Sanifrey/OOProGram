@@ -1,12 +1,18 @@
+/**
+* Устанавливаем принадлежность класса к пакету
+ */
 package MainP;
-
+/**
+ * Добавляем библиотеку для работы с асинхронными событиями
+ */
 import java.awt.EventQueue;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
-
 import javax.swing.JButton;
+
 import java.awt.BorderLayout;
 
 public class MainMenu {
@@ -43,10 +49,10 @@ public class MainMenu {
 	private void initialize() {
 
 		Otdel ot = new Otdel();
-		ot.main(false);
+		ot.init(false);
 
-		Planir MP = new Planir();
-		MP.main(false);
+		Planir mp = new Planir();
+		mp.init(false);
 
 		frame = new JFrame();
 		frame.setTitle("Главное меню");
@@ -67,7 +73,7 @@ public class MainMenu {
 
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MP.setVisiable(true);
+				mp.setVisiable(true);
 
 			}
 		});
