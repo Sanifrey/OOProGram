@@ -31,7 +31,7 @@ public class Formula {
 	}
 
 	/**
-	 * Приватный метод для расчёта свободного пространства в комнате
+	 * Приватный метод для расчёта свободной площади в комнате
 	 */
 	private void FormulaFree(float area, float width, float length) {
 		/**
@@ -79,6 +79,13 @@ public class Formula {
 	}
 
 	/**
+	 * Метод для заполнения в форме планировщик поля textField_3 значением FreeArea
+	 */
+	private void FillTextField_3(float FreeArea) {
+		plframe.settextField_3(String.valueOf(FreeArea));
+	}
+
+	/**
 	 * Публичный метод(Геттер) для получения значения свободной площади в комнате.
 	 */
 	public static float getFreeArea() {
@@ -91,12 +98,4 @@ public class Formula {
 	public static float getAllArea() {
 		return AllArea;
 	}
-
-	/**
-	 * Метод для заполнения в форме планировщик поля textField_3 значением FreeArea
-	 */
-	private void FillTextField_3(float FreeArea) {
-		plframe.settextField_3(String.valueOf(FreeArea));
-	}
-
 }
