@@ -89,18 +89,9 @@ public class MainMenu {
 		 */
 		Otdel ot = new Otdel();
 		/**
-		 * Вызываем метод init у  экземпляра класса "ot", и указываем параметр false
-		 */
-		ot.init(false);
-
-		/**
 		 * Создаем экземпляр класса Planir
 		 */
 		Planir mp = new Planir();
-		/**
-		 * Вызываем метод init у  экземпляра класса "mp", и указываем параметр false
-		 */
-		mp.setinit(false);
 		/**
 		 * Создаём объект
 		 */
