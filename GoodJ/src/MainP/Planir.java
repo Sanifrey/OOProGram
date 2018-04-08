@@ -138,7 +138,7 @@ public class Planir {
 								.addContainerGap(30, Short.MAX_VALUE))
 						.addGroup(groupLayout.createSequentialGroup().addPreferredGap(ComponentPlacement.RELATED)
 								.addComponent(button_2).addContainerGap()))));
-		
+
 		frame.getContentPane().setLayout(groupLayout);
 	}
 
