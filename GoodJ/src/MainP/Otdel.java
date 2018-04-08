@@ -90,7 +90,7 @@ public class Otdel {
 	 */
 	private void initialize() {
 		/**
-		 * Создаем экземлпяр класса JFrame
+		 * Создаем экземпляр класса JFrame
 		 */
 		frame = new JFrame();
 		/**
@@ -135,7 +135,7 @@ public class Otdel {
 			 */
 			public void actionPerformed(ActionEvent e) {
 				/**
-				 * Вызваем метод для сохранения данных в файл
+				 *  Вызываем метод для сохранения данных в файл
 				 */
 				SaveInFile();
 			}
@@ -159,7 +159,7 @@ public class Otdel {
 			}
 		});
 		/**
-		 * Создаём экземляр класса
+		 * Создаём экземпляр класса
 		 */
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		/**
@@ -200,7 +200,7 @@ public class Otdel {
 	 */
 	private void SaveInFile() {
 		/**
-		 * Создаем экземлпяр класса SaveFile
+		 * Создаем экземпляр класса SaveFile
 		 */
 		SaveFile sf = new SaveFile();
 		/**

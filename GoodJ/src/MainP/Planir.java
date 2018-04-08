@@ -105,7 +105,7 @@ public class Planir {
 	 */
 	private void initialize() {
 		/**
-		 * Создаем экземлпяр класса JFrame
+		 * Создаем  экземпляр класса JFrame
 		 */
 		frame = new JFrame();
 		/**
@@ -145,7 +145,7 @@ public class Planir {
 		textField_3.setColumns(10);
 		
 		/**
-		 * Создаем экземлпяр класса Formula
+		 * Создаем экземпляр класса Formula
 		 */
 		Formula fl = new Formula(this);
 		/**
@@ -185,7 +185,7 @@ public class Planir {
 			}
 		});
 		/**
-		 * Создаём экземляр класса
+		 * Создаём экземпляр класса
 		 */
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		/**

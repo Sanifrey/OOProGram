@@ -18,7 +18,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 /**
- * Подключаем библиотеку для работы с менеджером компановки
+ * Подключаем библиотеку для работы с менеджером компоновки
  */
 import java.awt.BorderLayout;
 
@@ -85,20 +85,20 @@ public class MainMenu {
 	 */
 	private void initialize() {
 		/**
-		 * Создаем экземлпяр класса Otdel
+		 * Создаем экземпляр класса Otdel
 		 */
 		Otdel ot = new Otdel();
 		/**
-		 * Вызываем метод init у экземляра класса "ot", и указываем параметр false
+		 * Вызываем метод init у  экземпляра класса "ot", и указываем параметр false
 		 */
 		ot.init(false);
 
 		/**
-		 * Создаем экземлпяр класса Planir
+		 * Создаем экземпляр класса Planir
 		 */
 		Planir mp = new Planir();
 		/**
-		 * Вызываем метод init у экземляра класса "mp", и указываем параметр false
+		 * Вызываем метод init у  экземпляра класса "mp", и указываем параметр false
 		 */
 		mp.setinit(false);
 		/**
