@@ -144,7 +144,7 @@ public class MainMenu {
 				/**
 				 * Делаем видимым окно "Отделочник"
 				 */
-				ot.SetVisiable(true);
+				ot.Visiable(true);
 			}
 		});
 
@@ -159,7 +159,7 @@ public class MainMenu {
 				/**
 				 * Делаем видимым окно "Планировщик"
 				 */
-				mp.setVisiable(true);
+				mp.Visiable(true);
 
 			}
 		});

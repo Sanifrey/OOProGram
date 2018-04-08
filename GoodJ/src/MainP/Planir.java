@@ -269,10 +269,10 @@ public class Planir {
 		textField_3.setText(arg);
 	}
 	/**
-	 * Cеттер для указания значения для setVisiable 
+	 * Публичный метод для указания значения для setVisiable 
 	 * в окне "Планировщик"
 	 */
-	public void setVisiable(boolean arg) {
+	public void Visiable(boolean arg) {
 		frame.setVisible(arg);
 
 	}

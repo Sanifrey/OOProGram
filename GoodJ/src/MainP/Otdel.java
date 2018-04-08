@@ -204,9 +204,9 @@ public class Otdel {
 		 */
 		SaveFile sf = new SaveFile();
 		/**
-		 * Вызываем метод GetSaveInFile
+		 * Вызываем метод PSaveInFile
 		 */
-		sf.GetSaveInFile();
+		sf.PSaveInFile();
 	}
 	/**
 	 * Метод для обновления текстовых полей при открытии окна "Отделочник"
@@ -224,14 +224,14 @@ public class Otdel {
 		textField_1.setText(String.valueOf(Formula.getFreeArea()));
 	}
 	/**
-	 * Публичный метод(Сеттер) для установки в окне "Планировщик" значения setVisible
+	 * Публичный метод для установки в окне "Планировщик" значения setVisible
 	 */
-	public void SetVisiable(boolean arg) {
+	public void Visiable(boolean arg) {
 		frame.setVisible(arg);
 		UpdateTextFields();
 	}
 	/**
-	 * Публичный метод(Сеттер) для инициализации окна "Планировщик"
+	 * Публичный метод для инициализации окна "Планировщик"
 	 */
 	public void init(boolean arg) {
 		main(arg);
