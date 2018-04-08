@@ -1,4 +1,4 @@
 =======================
 
 TOTAL AREA: 123.0
-FREE AREA: 89.0
+FREE AREA: 111.0
