@@ -13,9 +13,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
-/**
- * Подключаем библиотеку для работы с менеджером компановки
- */
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -93,7 +90,7 @@ public class Otdel {
 	 */
 	private void initialize() {
 		/**
-		 * Создаем экземлпяр класса Otdel
+		 * Создаем экземлпяр класса JFrame
 		 */
 		frame = new JFrame();
 		/**
@@ -108,30 +105,23 @@ public class Otdel {
 		 * Указываем операцию, которая будет произведена при закрытии окна.
 		 */
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		/**
-		 * Создаём простой компонент label класса JLabel
+		 * Создаём простые компоненты класса JLabel
 		 */
 		JLabel label = new JLabel("Общая площадь");
+		JLabel label_1 = new JLabel("Свободная площадь");
 		/**
-		 * Создаём простой компонент textField класса JTextField 
+		 * Создаём простые компоненты класса JTextField
 		 */
+		textField_1 = new JTextField();
 		textField = new JTextField();
 		/**
 		 * Указываем количество символов в строке
 		 */
-		textField.setColumns(10);
-		/**
-		 * Создаём простой компонент label_1 класса JLabel
-		 */
-		JLabel label_1 = new JLabel("Свободная площадь");
-		/**
-		 * Создаём простой компонент textField класса JTextField 
-		 */
-		textField_1 = new JTextField();
-		/**
-		 * Указываем количество символов в строке
-		 */
 		textField_1.setColumns(10);
+		textField.setColumns(10);
+		
 		/**
 		 * Создаём простой компонент button класса JButton 
 		 */
@@ -173,7 +163,7 @@ public class Otdel {
 		 */
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		/**
-		 * Установка размещения элементов на панели
+		 * Размещение элементов на панели
 		 */
 		groupLayout.setHorizontalGroup(groupLayout
 				.createParallelGroup(

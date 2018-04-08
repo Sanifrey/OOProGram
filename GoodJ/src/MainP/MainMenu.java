@@ -100,7 +100,7 @@ public class MainMenu {
 		/**
 		 * Вызываем метод init у экземляра класса "mp", и указываем параметр false
 		 */
-		mp.init(false);
+		mp.setinit(false);
 		/**
 		 * Создаём объект
 		 */
