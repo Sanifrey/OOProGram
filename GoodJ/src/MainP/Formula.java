@@ -57,7 +57,7 @@ public class Formula {
 	}
 
 	/**
-	 * Публичный метод для вызова приватного метода FormulaFree.
+	 * Публичный метод(Геттер) для вызова приватного метода FormulaFree.
 	 */
 	public void getFormula(String area, String width, String length) {
 		/**

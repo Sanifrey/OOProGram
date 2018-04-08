@@ -110,13 +110,8 @@ public class Otdel {
 	}
 
 	private void UpdateTextFields() {
-
-		Planir pl = new Planir();
-		Formula fl = new Formula(pl);
-
-		textField.setText(String.valueOf(fl.getAllArea()));
-		textField_1.setText(String.valueOf(fl.getFreeArea()));
-
+		textField.setText(String.valueOf(Formula.getAllArea()));
+		textField_1.setText(String.valueOf(Formula.getFreeArea()));
 	}
 
 	public void SetVisiable(boolean arg) {
