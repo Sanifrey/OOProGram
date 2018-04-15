@@ -3,10 +3,6 @@
  */
 package MainP;
 /**
-* Подключаем библиотеку для работы с диалоговыми окнами
- */
-import javax.swing.JOptionPane;
-/**
  * Объявляем класс с модификатором public
  */
 public class Formula {
@@ -29,8 +25,9 @@ public class Formula {
 	}
 	/**
 	 * Приватный метод для расчёта свободной площади в комнате
+	 * @return 
 	 */
-	private void FormulaFree(float area, float width, float length) {
+	private String FormulaFree(float area, float width, float length) {
 		/**
 		 * Присваиваем переменной AllArea значение переменной area
 		 */
@@ -50,28 +47,16 @@ public class Formula {
 		 * Вызываем метод FillTextField_3 для заполнения в форме планировщик поля
 		 * textField_3 значением FreeArea
 		 */
-		FillTextField_3(FreeArea);
+		//FillTextField_3(FreeArea);
+		return String.valueOf(FreeArea);
 	}
 	/**
-	 * Публичный метод(Геттер) для вызова приватного метода FormulaFree.
+	 * Публичный метод для вызова приватного метода FormulaFree.
+	 * @return 
 	 */
-	public void getFormula(String area, String width, String length) {
-		/**
-		 * Выполняем отслеживание блока кода, где может произойти ошибка, при помощи
-		 * исключения try
-		 */
-		try {
+	public String PFormula(String area, String width, String length) {
 			FormulaFree(Float.parseFloat(area), Float.parseFloat(width), Float.parseFloat(length));
-		}
-		/**
-		 * Исключение catch
-		 */
-		catch (Exception ep) {
-			/**
-			 * Обрабатываем исключение типа "Exception e" и показываем диалоговое окно
-			 */
-			JOptionPane.showMessageDialog(null, "\nПараметры объекта заполнены неверно!");
-		}
+			return String.valueOf(FreeArea);
 	}
 	/**
 	 * Метод для заполнения в форме планировщик поля textField_3 значением FreeArea
@@ -80,13 +65,13 @@ public class Formula {
 		plframe.settextField_3(String.valueOf(FreeArea));
 	}
 	/**
-	 * Публичный метод(Геттер) для получения значения свободной площади в комнате.
+	 * Геттер для получения значения свободной площади в комнате.
 	 */
 	public static float getFreeArea() {
 		return FreeArea;
 	}
 	/**
-	 * Публичный метод(Геттер) для получения значения всей площади в комнате.
+	 * Геттер для получения значения всей площади в комнате.
 	 */
 	public static float getAllArea() {
 		return AllArea;

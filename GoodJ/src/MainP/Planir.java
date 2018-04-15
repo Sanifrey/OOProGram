@@ -118,7 +118,7 @@ public class Planir {
 				/**
 				 * Вызываем метод getFormula
 				 */
-				fl.getFormula(gettextField(), gettextField_1(), gettextField_2());
+				fl.PFormula(gettextField(), gettextField_1(), gettextField_2());
 			}
 		});
 		/**
@@ -209,7 +209,7 @@ public class Planir {
 		return textField_2.getText();
 	}
 	/**
-	 * Cеттер для заполнения поля textField_3
+	 * Публичный метод для заполнения поля textField_3
 	 */
 	public void settextField_3(String arg) {
 		textField_3.setText(arg);
